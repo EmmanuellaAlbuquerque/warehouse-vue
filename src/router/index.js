@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import WarehouseListView from '../views/WarehouseListView.vue'
+import WarehouseNewView from '../views/WarehouseNewView.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/warehouses',
     name: 'warehouses',
     component: WarehouseListView
+  },
+  {
+    path: '/warehouses/new',
+    name: 'new',
+    component: WarehouseNewView
   }
 ]
 
