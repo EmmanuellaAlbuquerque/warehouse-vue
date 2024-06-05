@@ -14,11 +14,11 @@
               Home
             </v-btn>
 
-            <v-btn text color="grey" to="/warehouses">
+            <v-btn text color="grey" to="/warehouses" exact>
               Galpões Cadastrados
             </v-btn>
 
-            <v-btn text color="grey" to="/warehouses/new">
+            <v-btn text color="grey" to="/warehouses/new" exact>
               Cadastrar Galpão
             </v-btn>
 
