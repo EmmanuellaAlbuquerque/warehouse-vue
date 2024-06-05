@@ -2,9 +2,15 @@
   <div>
     <h1>Galpões Cadastrados</h1>
 
-    <input type="text" class="form" v-model="term" placeholder="Buscar galpão">
+    <v-text-field label="Buscar o galpão" v-model="term" class="my-5" />
+    
+    <v-card dark>
+      <v-card-text>
+        <WarehouseTable :warehouses="filterWarehouse" />
+      </v-card-text>      
+    </v-card>
 
-    <div v-for="w in filterWarehouse" :key="w.code">
+    <!-- <div v-for="w in filterWarehouse" :key="w.code">
       <Warehouse 
         :id =  "w.id"
         :name =  "w.name"
@@ -13,33 +19,19 @@
         :area =  "w.area"
         :address =  "w.address"
       />
-    </div>
-
-    <!-- <table border="1px">
-      <thead>
-        <th>Código</th>
-        <th>Nome</th>
-        <th>Sigla</th>
-      </thead>
-
-      <tbody>
-        <tr v-for="w in warehouses" :key="w.code">
-          <td>{{ w.id }}</td>
-          <td>{{ w.name }}</td>
-          <td>{{ w.code }}</td>
-        </tr>
-      </tbody>
-    </table> -->
+    </div> -->
   </div>
 </template>
 
 <script>
   import Warehouse from '../components/Warehouse';
+  import WarehouseTable from '../components/WarehouseTable';
 
   export default {
     name: 'WarehouseListView',
     components: {
-      Warehouse
+      Warehouse,
+      WarehouseTable
     },
 
     data() {
