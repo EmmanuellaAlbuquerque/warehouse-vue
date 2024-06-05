@@ -25,4 +25,12 @@
 </script>
 
 <style>
+  .card {
+    border-style: solid;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
