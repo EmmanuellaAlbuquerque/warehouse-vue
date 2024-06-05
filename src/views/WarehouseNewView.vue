@@ -3,48 +3,51 @@
     <h1>Cadastrar Galpão</h1>
 
     <div class="container">
-      <div>{{ msg }}</div>
+      <v-alert v-if="msg != null" type="info">
+        {{ msg }}
+      </v-alert>
 
-      <form v-on:submit.prevent>
-        <div class="form">
-          <label>Código: </label>
-          <input type="text" v-model="form.code" placeholder="Código do galpão">
-        </div>
+      <v-form v-on:submit.prevent>
 
-        <div class="form">
-          <label>Nome: </label>
-          <input type="text" v-model="form.name" placeholder="Nome do galpão">
-        </div>
+        <v-text-field 
+          label="Código"
+          v-model="form.code" 
+        />
 
-        <div class="form">
-          <label>Endereço: </label>
-          <input type="text" v-model="form.address" placeholder="Endereço do galpão">
-        </div>
+        <v-text-field 
+          label="Nome"
+          v-model="form.name" 
+        />
         
-        <div class="form">
-          <label>Cidade: </label>
-          <input type="text" v-model="form.city" placeholder="Cidade do galpão">
-        </div>     
+        <v-text-field 
+          label="Endereço"
+          v-model="form.address" 
+        />         
         
-        <div class="form">
-          <label>CEP: </label>
-          <input type="text" v-model="form.cep" placeholder="CEP do galpão">
-        </div>
+        <v-text-field 
+          label="Cidade"
+          v-model="form.city" 
+        />
+
+        <v-text-field 
+          label="CEP"
+          v-model="form.cep" 
+        />
+
+        <v-text-field 
+          label="Área em m²"
+          v-model="form.area" 
+        />
+
+        <v-textarea 
+          label="Descrição"
+          v-model="form.description" 
+        />
         
-        <div class="form">
-          <label>Área m²: </label>
-          <input type="number" v-model="form.area" placeholder="Área do galpão">
-        </div>   
-        
-        <div class="form">
-          <label>Descrição: </label>
-          <textarea v-model="form.description" cols="30" rows="5" placeholder="Descrição do galpão"></textarea>
-        </div>
-        
-        <div class="form">
-          <button v-on:click="postWarehouse">Cadastrar</button>
-        </div>
-      </form>
+        <v-btn v-on:click="postWarehouse" color="primary">
+          Cadastrar
+        </v-btn>      
+      </v-form>
     </div>
   </div>
 </template>
