@@ -1,19 +1,20 @@
-# warehouse-vue
+# Warehouse App - Frontend em VueJS
 
-## Project setup
-```
-yarn install
-```
+<p align="center">
+  <img src="https://img.shields.io/badge/vue.js-2.0-41b883.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D"/>	
+</p>
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+API em Rails disponível no repositório:
+[Warehouse App](https://github.com/EmmanuellaAlbuquerque/warehouse-app)
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Como executar a aplicação?
+```sh
+  # Clone o projeto
+  git clone git@github.com:EmmanuellaAlbuquerque/warehouse-vue.git
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+  # Instale as dependências
+  yarn install
+
+  # Inicie o servidor de desenvolvimento
+  yarn serve
+```
